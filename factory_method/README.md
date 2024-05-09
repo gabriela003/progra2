@@ -1,2 +1,2 @@
 # factory_method
-https://github.com/gabriela003/progra2/blob/main/factory_method/README.md
+Define una interfaz para crear un objeto, pero deja que sean las subclases quienes decidan qué clase instanciar. Permite que una clase delegue en sus subclases la creación de objetos.
