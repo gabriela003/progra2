@@ -1,0 +1,36 @@
+@startuml
+class org.example.state.Suspendido {
++ void accionar(Celular)
+}
+
+class org.example.state.Encendido {
++ void accionar(Celular)
+}
+
+class org.example.Celular {
+- String numeroTelefono
+- Estado estado
++ String getNumeroTelefono()
++ void setNumeroTelefono(String)
++ Estado getEstado()
++ void setEstado(Estado)
++ void presionarBoton()
++ void mostrarEstado()
+}
+
+
+interface org.example.state.Estado {
+~ void accionar(Celular)
+}
+
+class org.example.state.Apagado {
++ void accionar(Celular)
+}
+
+
+
+org.example.state.Estado <|.. org.example.state.Suspendido
+org.example.state.Estado <|.. org.example.state.Encendido
+org.example.state.Estado <|.. org.example.state.Apagado
+org.example.Celular o-- org.example.state.Estado
+@enduml
