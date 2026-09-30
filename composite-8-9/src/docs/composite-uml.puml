@@ -1,0 +1,24 @@
+@startuml
+class composite.Area {
+- String nombre
+- List<INombrable> rol
++ void agregarRol(INombrable)
++ void dameNombre()
+}
+
+
+interface composite.INombrable {
+~ void dameNombre()
+}
+
+class composite.Empleado {
+- String nombre
++ void dameNombre()
+}
+
+
+
+
+composite.INombrable <|.. composite.Area
+composite.INombrable <|.. composite.Empleado
+@enduml
